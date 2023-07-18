@@ -30,7 +30,7 @@ const LoginForm = () => {
                 validationSchema = { loginSchema }
                 onSubmit = { async(values) => {
                     login(values.email, values.password).then((response: AxiosResponse) => {
-                        if(response.status == 200){
+                        if(response.status === 200){
                             if(response.data.token){
                                 sessionStorage.setItem('sessionJWTToken', response.data.token)
                             } else {
