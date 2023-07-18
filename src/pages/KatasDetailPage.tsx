@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import { useNavigate, useParams} from 'react-router-dom';
 import { useSessionStorage } from "../hooks/useSessionStorage";
+import { Editor } from "../components/editor/Editor";
 
 export const KatasDetailPage = () => {
 
@@ -22,6 +23,7 @@ export const KatasDetailPage = () => {
             <h1>
                 Kata Detail Page: { id }
             </h1>
+            <Editor language={undefined} children={undefined}></Editor>
         </div>
     )
 }
