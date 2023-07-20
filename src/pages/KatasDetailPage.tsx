@@ -6,6 +6,9 @@ import { Editor } from "../components/editor/Editor";
 import { getKataByID } from "../services/katasService";
 import { AxiosResponse } from "axios";
 import { Kata } from "../utils/config/types/Kata.type";
+import { createTheme } from "@mui/material/styles";
+
+const defaultTheme = createTheme();
 
 export const KatasDetailPage = () => {
 
