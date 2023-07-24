@@ -15,7 +15,7 @@ export const FilePondUploader = () => {
             onupdatefiles={setFiles}
             allowMultiple={true}
             maxFiles={3}
-            // server="/api"
+            server="/http://localhost:8000/api/katas/uploadFile"
             name="Your Files"
             // labelIdle='Drag & Drop your files or <span class="filepond--label-action">Browse</span>'
         />
