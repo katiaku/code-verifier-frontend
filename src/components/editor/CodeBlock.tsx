@@ -5,10 +5,10 @@ import './styles/codeBlock.scss'
 interface CodeBlockProps {
     node: {
         attrs: {
-            langusge: string
+            language: string
         }
     },
-    updateAttribute: any,
+    updateAttributes: any,
     extension: any
 }
 
