@@ -23,6 +23,11 @@ export const FileUploader = () => {
         setVideoSrc(vidSrc);
     };
 
+    const handleUpload= (response: any) => {
+        // check the responses here
+        console.log("responses", response);
+    }
+
     const removeFile = (id: string | number | undefined) => {
         if(id){
             setFiles(files.filter((x) => x.id !== id));
@@ -38,8 +43,9 @@ export const FileUploader = () => {
             value={files} 
             maxFiles={5}
             // maxFileSize={2998000}
-            url="http://localhost:8000/api/uploadFile"
-            fakeUploading
+            url="http://localhost:8000/api/katas/uploadFile"
+            // fakeUploading
+            onUploadFinish={handleUpload}
         >
             {files.map((file: FileValidated) => (
                 <FileItem 
